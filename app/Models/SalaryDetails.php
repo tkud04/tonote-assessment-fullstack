@@ -4,7 +4,7 @@ namespace App\Models;
  
 use Illuminate\Database\Eloquent\Model;
  
-class Classes extends Model
+class SalaryDetails extends Model
 {
      /**
      * The attributes that are mass assignable.
@@ -12,8 +12,8 @@ class Classes extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'img',
-        'description'
+        'employee_id',
+        'salary',
+        'benefits'
     ];
 }

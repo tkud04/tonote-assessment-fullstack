@@ -20,3 +20,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/', [APIController::class,'getIndex']);
+Route::get('create-admin', [APIController::class,'getCreateAdmin']);
+Route::post('create-admin', [APIController::class,'postCreateAdmin']);
+Route::get('admin-login', [APIController::class,'getAdminLogin']);
+Route::post('admin-login', [APIController::class,'postAdminLogin']);
+Route::get('new-employee', [APIController::class,'getCreateEmployee']);
+Route::post('new-employee', [APIController::class,'postCreateEmployee']);
+Route::get('delete-employee', [APIController::class,'getDeleteEmployee']);
+Route::get('update-employee', [APIController::class,'getUpdateEmployee']);
+Route::post('update-employee', [APIController::class,'postUpdateEmployee']);
+Route::get('employees', [APIController::class,'getEmployees']);
+Route::get('employee', [APIController::class,'getEmployee']);
+Route::get('assign-leave', [APIController::class,'getAssignLeave']);
