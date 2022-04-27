@@ -194,12 +194,16 @@ $subject = $data['subject'];
 
            function updateEmployee($data)
            {
+            $u = User::where('id',$data['employee_id'])->first();
             $e = Employees::where('employee_id',$data['employee_id'])->first();
             $s = SalaryDetails::where('employee_id',$data['employee_id'])->first();
             
               if($e != null && $s != null)
                {
                    $temp = []; $temp2 = [];
+                   if(isset($data['fname'])) $temp['fname'] = $data['fname'];
+                   if(isset($data['lname'])) $temp['lname'] = $data['lname'];
+                   if(isset($data['status'])) $temp['status'] = $data['status'];
                    if(isset($data['leave_status'])) $temp['leave_status'] = $data['leave_status'];
                    if(isset($data['department'])) $temp['department'] = $data['department'];
                    if(isset($data['salary'])) $temp2['salary'] = $data['salary'];
